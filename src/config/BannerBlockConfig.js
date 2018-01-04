@@ -3,6 +3,7 @@ class BannerBlockConfig {
     this.primaryText = '';
     this.secondaryText = '';
     this.actionItem = [];
+    this.className = '';
   }
   definePrimaryText(text) {
     this.primaryText = text;
@@ -49,6 +50,15 @@ class BannerBlockConfig {
       },
     };
     return this.actionItem.push(obj);
+  }
+
+  // add className to the component
+  addClassName(name) {
+    if (typeof name !== 'string' || name === '') {
+      return new Error('{ addClassName } must be a valid string');
+    }
+    this.name = name;
+    return this.name;
   }
 }
 

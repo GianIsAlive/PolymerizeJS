@@ -4,7 +4,7 @@
   @include block-style(100%);
   position: absolute;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   z-index: 10;
 }
 
@@ -12,6 +12,10 @@
 .header-block .main-nav {
   display: inline-block;
   vertical-align: middle;
+}
+
+.header-block .main-nav {
+  margin-left: 120px;
 }
 
 .header-block .main-nav li {

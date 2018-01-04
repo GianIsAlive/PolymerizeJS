@@ -3,6 +3,7 @@ class headerBlockData {
   constructor() {
     this.appName = '';
     this.navItem = [];
+    this.className = '';
   }
 
   defineAppName(name) {
@@ -49,6 +50,15 @@ class headerBlockData {
       },
     };
     return this.navItem.push(obj);
+  }
+
+  // add className to the component
+  addClassName(name) {
+    if (typeof name !== 'string' || name === '') {
+      return new Error('{ addClassName } must be a valid string');
+    }
+    this.name = name;
+    return this.name;
   }
 }
 
